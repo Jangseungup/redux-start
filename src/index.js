@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import store from './redux/store';
 import {addTodo, completeTodo, showComplete} from './redux/actions';
 import ReduxContext from './contacts/ReduxContext';
+import { Provider } from 'react-redux';
 
 // store의 상태가 변경되면 하기의 함수가 호출된다. 
 // const unsubscribe = store.subscribe(() => {
@@ -40,9 +41,11 @@ import ReduxContext from './contacts/ReduxContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReduxContext.Provider value={store}>
+    {/* <ReduxContext.Provider value={store}> */}
+    <Provider store={store}>
       <App />
-    </ReduxContext.Provider>
+    </Provider>
+    {/* </ReduxContext.Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

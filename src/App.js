@@ -3,8 +3,10 @@ import './App.css';
 import { addTodo } from './redux/actions';
 import useReduxState from './hooks/useReduxState';
 import useReduxDispatch from './hooks/useReduxDispatch';
-import TodoList from './components/todoList';
-import TodoForm from './components/todoForm';
+import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
+import TodoListContainer from './containers/TodoListContainer';
+import TodoFormContainer from './containers/TodoFormContainer';
 
 
 function App() {
@@ -13,8 +15,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <TodoList />
-        <TodoForm />
+        {/* <TodoList />
+        <TodoForm /> */}
+        <TodoListContainer />
+        <TodoFormContainer />
         {/* <button onClick={click}>추가</button> */}
       </header>
       
