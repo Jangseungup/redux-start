@@ -38,3 +38,32 @@ export function showComplete() {
 //     return newState;
 // }
 
+// users 
+// 깃험 API 호출을 시작하는 것을 의미
+export const GET_USERS_START = "GET_USERS_START"; 
+
+// 깃험 API 호출에 대한 응답이 성공적으로 돌아온 경우
+export const GET_USERS_SUCCESS = "GET_USERS_SUCCESS"; 
+
+// 깃험 API 호출에 대한 응답이 실패한 경우
+export const GET_USERS_FAIL = "GET_USERS_FAIL";
+
+export function getUsersStart() {
+    return {
+        type: GET_USERS_START,
+    }
+}
+
+export function getUsersSuccess(data) {
+    return {
+        type: GET_USERS_SUCCESS,
+        data,
+    }
+}
+
+export function getUsersFail(error) {
+    return {
+        type: GET_USERS_FAIL,
+        error
+    }
+}
